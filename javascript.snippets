@@ -1,4 +1,17 @@
 # Prototype
+snippet reactComponent
+	import React, { Component, PropTypes } from 'react';
+
+	class ${1:component_name} extends Component{
+		render(){
+			return(
+				<div id="${1:component_name}">
+					${2}
+				</div>
+			)
+		}
+	}
+	export default ${1:component_name};
 snippet proto
 	${1:class_name}.prototype.${2:method_name} =
 	function(${3:first_argument}) {
