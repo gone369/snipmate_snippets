@@ -3,6 +3,18 @@ snippet reactComponent
 	import React, { Component, PropTypes } from 'react';
 
 	class ${1:component_name} extends Component{
+		constructor(args){
+			super(args)
+			this.state = {
+				mounted : false
+			}
+		}
+		componentDidMount(){
+		}
+		componentWillUnmont(){
+		}
+		componentWillReceiveProps(nextProps){
+		}
 		render(){
 			return(
 				<div id="${1:component_name}">
@@ -10,6 +22,12 @@ snippet reactComponent
 				</div>
 			)
 		}
+	}
+	${1:component_name}.propTypes = {
+		//start : React.PropTypes.bool
+	}
+	${1:component_name}.defaultProps ={
+	  //start : false
 	}
 	export default ${1:component_name};
 snippet proto
@@ -132,5 +150,3 @@ snippet $
 		${4}
 	});
 
-
-#SENCHTA TOUCH functions
